@@ -1,11 +1,11 @@
 <script lang="ts">
     import { browser } from "$app/environment";
-	import Header from "$lib/ui/Header.svelte";
-	import Landing from "$lib/ui/Landing.svelte";
-	import SetUp from "$lib/ui/SetUp.svelte";
-	import ContributionGuide from "$lib/ui/ContributionGuide.svelte";
-	import ToTopButton from "$lib/ui/ToTopButton.svelte";
-	import AboutRivETH from "$lib/ui/AboutRivETH.svelte";
+	import Header from "../ui/Header.svelte";
+	import Landing from "../ui/Landing.svelte";
+	import SetUp from "../ui/SetUp.svelte";
+	import ContributionGuide from "../ui/ContributionGuide.svelte";
+	import ToTopButton from "../ui/ToTopButton.svelte";
+	import AboutRivETH from "../ui/AboutRivETH.svelte";
 
     let showScrollToTopButton: boolean = $state(false);
 

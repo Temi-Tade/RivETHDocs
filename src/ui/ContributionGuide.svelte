@@ -29,7 +29,7 @@
                             showModal = true;
                             modalText = `
                                 <p class='text-center mb-1'>Send donations to:</p>
-                                <p><code class='break-all text-lg'>0x49Df3350fafa751212cCa8AB631cEa6e6ACB2ce6</code> (ERC20)</p>
+                                <p class='text-center'><code class='break-all text-lg'>0x49Df3350fafa751212cCa8AB631cEa6e6ACB2ce6</code></p>
                                 <p class='text-center mt-1'>Thank you for yout support.</p>
                             
                             `

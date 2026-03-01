@@ -39,6 +39,7 @@
 
         <div class="m-1 p-1">
             <a href="#setup" class="!text-[#fff] !font-bold">Installation and Set up &darr;</a>
+            <a href="./docs" class="!text-[#fff] !font-bold">Documentation &rarr;</a>
         </div>
     </div>
 </section>
