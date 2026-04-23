@@ -2,10 +2,7 @@
     import { browser } from "$app/environment";
 	import Header from "../ui/Header.svelte";
 	import Landing from "../ui/Landing.svelte";
-	import SetUp from "../ui/SetUp.svelte";
-	import ContributionGuide from "../ui/ContributionGuide.svelte";
 	import ToTopButton from "../ui/ToTopButton.svelte";
-	import AboutRivETH from "../ui/AboutRivETH.svelte";
 
     let showScrollToTopButton: boolean = $state(false);
 
@@ -23,9 +20,6 @@
 <div>
     <Header/>
     <Landing/>
-    <AboutRivETH/>
-    <SetUp/>
-    <ContributionGuide/>
 
     {#if showScrollToTopButton} 
         <ToTopButton/>

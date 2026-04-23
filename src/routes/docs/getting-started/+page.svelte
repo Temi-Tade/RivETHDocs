@@ -6,11 +6,13 @@
     import DocSubHead from "../../../ui/DocSubHead.svelte";
     import Info from "../../../ui/Info.svelte";
     import { base } from "$app/paths";
-	import CopyButton from "../../../ui/CopyButton.svelte";
 	import DocImage from "../../../ui/DocImage.svelte";
+	import CodeSnippet from "../../../ui/CodeSnippet.svelte";
 
     let activePageId = 1;
     let installCode = "curl -L -O https://github.com --output RivETH.zip && unzip RivETH.zip -d temp && mv temp/RivETH-main/* . && rm -rf temp RivETH.zip";
+    let navigateCode = `cd RivETH
+npm install`;
 
     const PAGES = [
         { id: 0, name: "What is RivETH?", href: `${base}/docs` },
@@ -25,7 +27,7 @@
         },
         {
             header: "VS Code Extensions",
-            details: "You need <strong>Live Server</strong> (to serve the UI) and a <strong>Solidity</strong> extension (for syntax highlighting)."
+            details: "You need <strong>Live Server</strong> (to serve the UI) and a <strong>Solidity</strong> extension - preferably by Nomic Foundation (for syntax highlighting)."
         },
         {
             header: "Terminal Access",
@@ -41,29 +43,27 @@
         <DocBody>
             <p>Ready to build? Follow these steps to set up your local development environment with RivETH.</p>
             
-            <DocSubHead>1. Requirements</DocSubHead>
+            <DocSubHead>1. Prerequisites</DocSubHead>
             <DocList items={REQUIREMENTS} />
 
             <DocSubHead>2. Installation</DocSubHead>
             <p>Open your terminal and run the following command to download and extract RivETH into your working directory:</p>
-            <pre class="relative bg-gray-900 text-green-400 p-4 rounded-md my-4 overflow-x-auto md:w-200"><CopyButton textToCopy={installCode}/>{installCode}</pre>
+            <CodeSnippet title="Terminal" code={installCode} />
 
             <DocSubHead>3. Setup & Dependencies</DocSubHead>
             <p>Navigate into the directory and install the necessary tools (Hardhat, Ethers.js, and the Solidity compiler):</p>
-            <pre class="bg-gray-900 text-green-400 p-4 rounded-md my-4 md:w-200">cd RivETH
-npm install
-</pre>
+            <CodeSnippet title="Terminal" code={navigateCode} />
 
             <DocSubHead>4. Spin up the Node</DocSubHead>
             <p>In your terminal, start the local Hardhat network. This spins up the local Blockchain node and provides you with 20 pre-funded test accounts:</p>
-            <pre class="bg-gray-900 text-green-400 p-4 rounded-md my-4 md:w-200">npx hardhat node</pre>
+            <CodeSnippet title="Terminal" code="npx hardhat node" />
 
             <Info type="info">
                 Keep this terminal window open! RivETH automatically connects to the node's RPC URL. If the node stops, your contracts and transactions cannot be loaded.
             </Info>
 
             <DocSubHead>5. Launch the UI</DocSubHead>
-            <p>Open the project in VS Code and click <strong>Go Live</strong> on the bottom status bar (Live Server extension). This will open the RivETH dashboard in your default browser.</p>
+            <p>Open the project in VS Code and click <strong>Go Live</strong> on the bottom status bar (Live Server extension). This will open the RivETH dashboard (likely on port 5500) in your default browser.</p>
 
             <DocImage
                 src="{base}/images/riveth-landing-page-post-install-and-setup.png"

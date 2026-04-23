@@ -1,7 +1,8 @@
 <script lang="ts">
     import type AboutType from "$lib/types/AboutType";
 	import { onMount } from "svelte";
-	import Nav from "./Nav.svelte";
+	// import Nav from "./Nav.svelte";
+    import Icon from "@iconify/svelte";
     import { base } from "$app/paths";
 
     const ABOUTS: AboutType[] = [
@@ -24,10 +25,10 @@
 </script>
 
 <section>
-    <div class="h-[94dvh] p-3 flex flex-col justify-center items-center bg-[var(--theme-color)] text-[#fff] relative">
-        <div class="absolute top-0">
+    <div class="h-[94dvh] p-3 flex flex-col justify-center items-center bg-[#ccc7] text-[#123] relative">
+        <!-- <div class="absolute top-0">
             <Nav/>
-        </div>
+        </div> -->
 
         <div>
             <img src="{base}/images/RivETH.png" alt="RivETH" width="100" class="rounded-sm">
@@ -38,8 +39,7 @@
         </div>
 
         <div class="m-1 p-1">
-            <a href="#setup" class="!text-[#fff] !font-bold">Installation and Set up &darr;</a>
-            <a href="./docs" class="!text-[#fff] !font-bold">Documentation &rarr;</a>
+            <a href="./docs" class="!text-[#fff] !font-bold !no-underline !bg-[#123] !hover:bg-[#fff] ">Get Started <Icon icon="ph:caret-right-bold" class="inline-block"/> </a>
         </div>
     </div>
 </section>

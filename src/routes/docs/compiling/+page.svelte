@@ -19,7 +19,7 @@
     const COMPILATION_STEPS = [
         {
             header: "The Shell Script",
-            details: "Use <code>./compile.sh [FileName]</code> (omit the .sol). This invokes the Solidity compiler (solc) to generate the necessary artifacts."
+            details: "Use <code>./compile [FileName]</code> (omit the .sol). This invokes the Solidity compiler (solc) to generate the necessary artifacts."
         },
         {
             header: "The Make Shortcut",
@@ -55,7 +55,7 @@
             <p>Open a separate terminal window (while your Hardhat node is running) and run the compilation command:</p>
             
             <pre class="bg-gray-900 text-green-400 p-4 rounded-md my-4"># Method 1: Using the shell script
-./compile.sh MyContract
+./compile MyContract
 
 # Method 2: Using the Makefile shortcut
 make MyContract</pre>
@@ -63,7 +63,7 @@ make MyContract</pre>
             <DocList items={COMPILATION_STEPS} />
 
             <DocSubHead>3. Verification</DocSubHead>
-            <p>After running the command, check your <code>artifacts/</code> folder. You should see .abi and .bin files named after your contract. This file contains the ABI and Bytecode that the RivETH UI will fetch.</p>
+            <p>After running the command, check your <code>artifacts/</code> folder. You should see .abi and .bin files named after your contract. These files contain the ABI and Bytecode that the RivETH UI will fetch.</p>
 
             <DocNavLinks
                 previousHref={activePageId === 0 ? PAGES[activePageId].href : PAGES[activePageId - 1].href}

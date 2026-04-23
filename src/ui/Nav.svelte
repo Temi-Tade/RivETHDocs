@@ -32,7 +32,7 @@
         </div>
 
         {#if showNav}
-            <div class="shadow-lg rounded-md border-1 bg-[#fff]">
+            <div class="shadow-lg rounded-md bg-[#fff]">
                 {#each SECTIONS as section (section.id)}
                     <p>
                         <a

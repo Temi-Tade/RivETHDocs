@@ -28,7 +28,7 @@
     const FACTS = [
         {
             header: "Dev-First Workflow",
-            details: "Write solidity in a code editor of your choice, run your node in the terminal and interact with it right insode the browser. Write code in editor -> Compile in terminal -> Interact in browser"
+            details: "Write solidity in a code editor of your choice, run your node in the terminal and interact with it right inside the browser. Write code in editor -> Compile in terminal -> Interact in browser"
         },
         {
             header: "Simple and Fast",
@@ -43,12 +43,20 @@
             details: "RivETH uses hardhat as its local blockchain node, it automatically sets up all 20 default accounts with funds, you can switch between account easily from a dropdown menu."
         },
         {
+            header: "Monitor transactions and decode calldata",
+            details: "The built-in local block explorer - RivETHScan allows developers to monitor transactions in real time and also decode transaction calldata."
+        },
+        {
+            header: "Test with Injected Web3 Provider",
+            details: "Test your smart contracts with an injected web3 provider like MetaMask, RivETH allows you to switch between the local hardhat node and an injected provider with a simple keyboard shortcut."
+        },
+        {
             header: "Supports cross-contract calls",
             details: "Cross-contract calls can be made across multiple RivETH tabs."
         },
         {
             header: "Install once, use offline",
-            details: "Install with one command, set up dependencies with <code>npm install</code>, and use offline."
+            details: "Download with one command, set up dependencies with <code>npm install</code>, and use offline."
         }
     ]
 
@@ -61,6 +69,10 @@
         <DocBody>
             <p><strong>RivETH</strong> is a lightweight Ethereum Smart Contract development toolkit that runs locally and in the browser.</p>
             <DocSubHead>What makes it cool?</DocSubHead>
+            <div>
+                <p class="mb-2">The web3 ecosystem was once infamous for poor User Interface and Experience on dApps, while that has changed over the past few years, the same cannot be said for the Developer Experience (I mean, no one cares about the developer :)). For this reason, I have built <strong>RivETH</strong>.</p>
+                <p>RivETH is designed to be a simple and efficient tool for developers who want to quickly prototype and test their smart contracts without the overhead of setting up complex development environments. It provides a streamlined workflow for compiling, deploying, and interacting with smart contracts, all within a user-friendly interface.</p>
+            </div>
             <DocList
                 items={FACTS}
             />

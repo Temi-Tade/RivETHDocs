@@ -15,7 +15,7 @@
         { id: 1, name: "Getting Started", href: `${base}/docs/getting-started` },
         { id: 2, name: "Writing & Compiling", href: `${base}/docs/compiling` },
         { id: 3, name: "Interacting", href: `${base}/docs/interacting` },
-        { id: 4, name: "Advanced Features", href: `${base}/docs/advanced` }
+        { id: 4, name: "Other Features", href: `${base}/docs/other` }
     ];
 
     const CONSTRUCTOR_RULES = [
@@ -68,15 +68,15 @@
             <DocSubHead>3. Interacting with Functions</DocSubHead>
             <p>Once deployed, the UI generates buttons for every function in your contract. Unlike the constructor, <strong>each function parameter gets its own dedicated input field</strong> based on the Solidity code. The function parameters should be formatted in the same way as the constructor.</p>
             <DocImage
-                src="{base}/images/riveth-deploy-contract.png"
+                src="{base}/images/riveth-tx-buttons.png"
                 caption="Each function has a button (lower left) that calls it when clicked. Transaction logs can be seen on the right hand side."
             />
             
-            <!-- <ul class="list-disc ml-6 space-y-2 mb-4">
+            <ul class="list-disc ml-6 space-y-2 mb-4">
                 <li><span class="text-blue-500 font-bold">Blue Buttons:</span> View/Pure functions (Reads state, no gas).</li>
-                <li><span class="text-orange-500 font-bold">Orange/Red Buttons:</span> State-changing functions (Writes state, costs gas).</li>
-                <li><strong>Payable:</strong> Use the <strong>Value</strong> field to send Ether with the transaction.</li>
-            </ul> -->
+                <li><span class="text-orange-500 font-bold">Orange Buttons:</span> State-changing functions (Writes state, costs gas).</li>
+                <li><strong class="text-red-500">Red Buttons:</strong> Use the <strong>Value</strong> field to send Ether with the transaction.</li>
+            </ul>
 
             <DocSubHead>4. Account Selection</DocSubHead>
             <p>Choose from the 20 pre-funded Hardhat accounts in the dropdown. RivETH tracks the address and current balance, allowing you to swap signers instantly for testing permissions or multi-user flows.</p>
@@ -87,6 +87,10 @@
 
             <Info type="caution">
                 These accounts, and their private keys, are publicly known. Any funds sent to them on Mainnet or any other live network WILL BE LOST.
+            </Info>
+
+            <Info type="info">
+                <strong>Note: </strong> The selected account from the 'Accounts' dropdown will be the <code>msg.sender</code> for any transaction, you can test your contract with different signers by simply switching accounts and calling functions again. This will be particularly useful for testing permissions or multi-user flows in your contract.
             </Info>
 
             <DocNavLinks

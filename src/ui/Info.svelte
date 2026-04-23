@@ -2,6 +2,7 @@
     let { type, children } = $props();
 </script>
 
-<div class="p-1 my-2">
-    <p class={`rounded-md p-2 text-[#fff] ${type === 'warning' ? 'bg-[#ff7700]' : ''} ${type === 'caution' ? 'bg-[#ff0000]' : ''} ${type === 'info' ? 'bg-[#0000ff]' : ''}`}>{@render children?.()}</p>
+<div class="border-l-4 p-4 mt-4 rounded-md p-2 text-[#111] {`${type === 'warning' ? 'bg-orange-500/30 border-orange-500' : ''} ${type === 'caution' ? 'bg-red-900/20 border-red-500' : ''} ${type === 'info' ? 'bg-blue-900/20 border-blue-500' : ''}`}">
+    <p class="text-sm">{@render children?.()}</p>
 </div>
+
