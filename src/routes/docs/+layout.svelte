@@ -12,16 +12,16 @@
 	<Header/>
 
 	<div>
-		<div class="md:flex overflow-y-auto h-[calc(100vh-3rem)]">
-			<div class="md:left-0 top-13 bg-[#fff] md:shadow-l-md z-900 bg-gray-200/50 pr-3">
+		<div class="md:flex">
+			<div class="md:left-0 top-13 bg-[#fff] md:shadow-l-md z-900 bg-gray-200/50">
 				<DocNavBar/>
 			</div>
 		
-			<div class="overflow-y-auto md:pl-5 px-2">
+			<div class="md:overflow-y-auto md:h-[calc(100vh-3rem)] md:pl-5 px-2">
 				<Info type="info">
 					Latest Releases:
-					<p>RivETH: v1.5.0</p>
-					<p>Documentation: v1.1.0</p>
+					<span class="block">RivETH: v1.5.0</span>
+					<span class="block">Documentation: v1.1.0</span>
 				</Info>
 				{@render children()}
 			</div>

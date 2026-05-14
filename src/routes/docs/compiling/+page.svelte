@@ -6,6 +6,7 @@
     import DocSubHead from "../../../ui/DocSubHead.svelte";
     import Info from "../../../ui/Info.svelte";
     import { base } from "$app/paths";
+	import CodeSnippet from "../../../ui/CodeSnippet.svelte";
 
     let activePageId = 2;
 
@@ -30,6 +31,12 @@
             details: "The compiler automatically writes ABI and BIN files to the <code>artifacts/</code> folder. <strong>Do not edit these manually.</strong>"
         }
     ];
+
+    let compileCode = `Method 1: Using the shell script
+./compile MyContract
+
+# Method 2: Using the Makefile shortcut
+make MyContract`
 </script>
 
 <section>
@@ -53,13 +60,8 @@
 
             <DocSubHead>2. Compiling the Code</DocSubHead>
             <p>Open a separate terminal window (while your Hardhat node is running) and run the compilation command:</p>
-            
-            <pre class="bg-gray-900 text-green-400 p-4 rounded-md my-4"># Method 1: Using the shell script
-./compile MyContract
 
-# Method 2: Using the Makefile shortcut
-make MyContract</pre>
-
+            <CodeSnippet code={compileCode} title="Compilation Commands" />
             <DocList items={COMPILATION_STEPS} />
 
             <DocSubHead>3. Verification</DocSubHead>

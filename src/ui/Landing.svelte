@@ -4,6 +4,7 @@
 	// import Nav from "./Nav.svelte";
     import Icon from "@iconify/svelte";
     import { base } from "$app/paths";
+	import CopyButton from "./CopyButton.svelte";
 
     const ABOUTS: AboutType[] = [
         { id: 0, label: "A local, open-source Ethereum Smart Contract development toolkit that runs right out of the box, in the browser." },
@@ -40,6 +41,11 @@
 
         <div class="m-1 p-1">
             <a href="./docs" class="!text-[#fff] !font-bold !no-underline !bg-[#123] !hover:bg-[#fff] ">Get Started <Icon icon="ph:caret-right-bold" class="inline-block"/> </a>
+        </div>
+
+        <div class="m-2 p-2 border-2 border-[#1237] rounded-md bg-[#cccc] flex items-center justify-evenly font-bold">
+            <pre>curl -L https://temi-tade.github.io{base}/install.sh | bash</pre>
+            <CopyButton textToCopy={`curl -L https://temi-tade.github.io${base}/install.sh | bash`}/>
         </div>
     </div>
 </section>

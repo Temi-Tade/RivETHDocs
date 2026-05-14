@@ -10,6 +10,15 @@
     transition: .5s;
 }
 
+::-webkit-scrollbar {
+    width: .35rem
+}
+
+::-webkit-scrollbar-thumb {
+    background: #777C;
+    border-radius: 1rem;
+}
+
 html {
     scroll-behavior: smooth;
     font-family: "Lexend", sans-serif;
