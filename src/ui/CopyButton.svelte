@@ -16,7 +16,7 @@
 
 </script>
 
-<div class="w-5 h-5 inline-block" title="Copy to clipboard">
+<div class="w-5 h-5 flex items-center justify-center fixed right-4 shadow-lg bg-[#eeec] rounded-md p-3 md:static md:bg-transparent" title="Copy to clipboard">
     <button
         class="!bg-[transparent] !p-0 md:mx-1"
         onclick={handleCopy}>

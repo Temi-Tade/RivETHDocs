@@ -43,7 +43,7 @@
             <a href="./docs" class="!text-[#fff] !font-bold !no-underline !bg-[#123] !hover:bg-[#fff] ">Get Started <Icon icon="ph:caret-right-bold" class="inline-block"/> </a>
         </div>
 
-        <div class="m-2 p-2 border-2 border-[#1237] rounded-md bg-[#cccc] flex items-center justify-evenly font-bold">
+        <div class="md:w-auto w-full m-2 p-2 border-2 border-[#1237] rounded-md bg-[#cccc] flex items-center justify-evenly font-bold overflow-auto relative">
             <pre>curl -L https://temi-tade.github.io{base}/install.sh | bash</pre>
             <CopyButton textToCopy={`curl -L https://temi-tade.github.io${base}/install.sh | bash`}/>
         </div>
