@@ -4,6 +4,7 @@ curl -L -0 https://github.com/Temi-Tade/RivETH/archive/refs/heads/main.zip --out
 echo "Installation successful! Cleaning up..."
 echo "Installing dependencies..."
 
+touch /usr/local/bin/solc
 wget -O /usr/local/bin/solc https://github.com/ethereum/solidity/releases/download/v0.8.36/solc-static-linux
 chmod +x /usr/local/bin/solc
 solc --version
